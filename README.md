@@ -54,3 +54,26 @@ Moses (Red Sea) · Nativity · Easter (empty tomb) · Joseph · Ruth
 | `pages/vol-2/13-parent-note.png` | For parents and Sunday school |
 
 Parent notes include a one-line context note for each story, conversation prompts, print settings, the personal-use line, and the BSB credit.
+
+## The Nativity
+
+A 14-page coloring story book, the first story-arc book in the series. Twelve scenes tell Jesus’ birth in order, each with a short exact line from the Berean Standard Bible. Same print masters as the volumes: US Letter, 2550×3300 at 300 dpi, pure black and white, footer `STEWARDOFTHEKING · BSB`.
+
+| File | Page |
+| --- | --- |
+| `pages/nativity/01-cover.png` | Cover |
+| `pages/nativity/02-gabriel-mary.png` | Gabriel appears to Mary |
+| `pages/nativity/03-mary-says-yes.png` | Mary says yes |
+| `pages/nativity/04-mary-visits-elizabeth.png` | Mary visits Elizabeth |
+| `pages/nativity/05-joseph-dream.png` | An angel speaks to Joseph |
+| `pages/nativity/06-caesars-decree.png` | Caesar’s decree |
+| `pages/nativity/07-journey-to-bethlehem.png` | The journey to Bethlehem |
+| `pages/nativity/08-no-room-at-the-inn.png` | No room at the inn |
+| `pages/nativity/09-baby-in-the-manger.png` | Jesus born and laid in a manger |
+| `pages/nativity/10-angels-and-shepherds.png` | Angels appear to the shepherds |
+| `pages/nativity/11-shepherds-visit.png` | The shepherds visit |
+| `pages/nativity/12-shepherds-tell-everyone.png` | The shepherds tell everyone |
+| `pages/nativity/13-mary-treasures.png` | Mary treasures these things |
+| `pages/nativity/14-parent-note.png` | For parents and Sunday school |
+
+Printable books: `pdf/nativity-letter.pdf` (US Letter) and `pdf/nativity-a4.pdf` (A4, fit and center). Caption text and the Bible Hub source for each line are in `nativity/CAPTIONS.md`. See `nativity/README.md` to rebuild the pages.

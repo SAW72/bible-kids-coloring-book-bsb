@@ -36,6 +36,61 @@ Footer on every page: `STEWARDOFTHEKING · BSB`
 - `pages/vol-2/12-ruth-naomi.png`
 - `pages/vol-2/13-parent-note.png`
 
+## The Nativity
+
+Story-arc coloring book. Same print masters: US Letter, 2550×3300, 300 dpi, two gray levels. Footer `STEWARDOFTHEKING · BSB`. Personal use. Verse lines are exact Berean Standard Bible text (public domain).
+
+### Pages
+
+- `pages/nativity/01-cover.png`
+- `pages/nativity/02-gabriel-mary.png`
+- `pages/nativity/03-mary-says-yes.png`
+- `pages/nativity/04-mary-visits-elizabeth.png`
+- `pages/nativity/05-joseph-dream.png`
+- `pages/nativity/06-caesars-decree.png`
+- `pages/nativity/07-journey-to-bethlehem.png`
+- `pages/nativity/08-no-room-at-the-inn.png`
+- `pages/nativity/09-baby-in-the-manger.png`
+- `pages/nativity/10-angels-and-shepherds.png`
+- `pages/nativity/11-shepherds-visit.png`
+- `pages/nativity/12-shepherds-tell-everyone.png`
+- `pages/nativity/13-mary-treasures.png`
+- `pages/nativity/14-parent-note.png`
+
+### PDFs
+
+- `pdf/nativity-letter.pdf`
+- `pdf/nativity-a4.pdf`
+
+### Docs and build
+
+- `nativity/README.md`
+- `nativity/CAPTIONS.md`
+- `nativity/build_pages.py`
+- `nativity/art/character-sheet.png`
+- `nativity/art/cover.png`
+- `nativity/art/02-gabriel-mary.png`
+- `nativity/art/03-mary-says-yes.png`
+- `nativity/art/04-mary-visits-elizabeth.png`
+- `nativity/art/05-joseph-dream.png`
+- `nativity/art/06-caesars-decree.png`
+- `nativity/art/07-journey-to-bethlehem.png`
+- `nativity/art/08-no-room-at-the-inn.png`
+- `nativity/art/09-baby-in-the-manger.png`
+- `nativity/art/10-angels-and-shepherds.png`
+- `nativity/art/11-shepherds-visit.png`
+- `nativity/art/12-shepherds-tell-everyone.png`
+- `nativity/art/13-mary-treasures.png`
+- `nativity/fonts/NOTICE.md`
+- `nativity/fonts/OFL.txt`
+- `nativity/fonts/Andika-Bold.ttf`
+- `nativity/fonts/Andika-Regular.ttf`
+- `nativity/fonts/Fredoka-Bold.ttf`
+- `nativity/fonts/Fredoka-SemiBold.ttf`
+- `nativity/fonts/Nunito-Bold.ttf`
+- `nativity/fonts/Nunito-ExtraBold.ttf`
+- `nativity/fonts/Nunito-Regular.ttf`
+
 ## Docs
 
 - `README.md`
