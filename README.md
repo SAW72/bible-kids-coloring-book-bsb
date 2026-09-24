@@ -2,14 +2,21 @@
 
 Free kids coloring book series (ages 3–12) based on Bible stories from the Berean Standard Bible (public domain). Original cartoon-realistic animated style illustrations, short Hebrew and Greek context notes, and printable pages from Creation through the New Testament.
 
-These print masters are pure black-and-white line art for crayons and markers: bold outlines, large colorable regions, and kid-safe scenes. Each file is a US Letter page, **2550×3300 pixels at 300 dpi**.
+These print masters are pure black-and-white line art for crayons and markers: bold outlines, large colorable regions, and kid-safe scenes. Page art is a US Letter PNG, **2550×3300 pixels at 300 dpi**. Buyer PDFs are in `pdf/`.
 
 Stories are inspired by the Berean Standard Bible (public domain). This set is for personal use at home, in a classroom, or in Sunday school. Please don’t resell the files or the prints.
 
-## Print tips
+## Which file to print
 
-- Paper: US Letter (8.5×11 in), portrait.
-- Scale: **Actual size / 100%**. Do not “fit to page” if your dialog already uses the page size.
+Print **at actual size (100%)**. Leave “fit to page” and “shrink to fit” off, so the footer and the margins stay as drawn.
+
+| Paper | Volume 1 | Volume 2 |
+| --- | --- | --- |
+| US Letter (8.5×11 in) | `pdf/vol-1-letter.pdf` | `pdf/vol-2-letter.pdf` |
+| A4 (210×297 mm) | `pdf/vol-1-a4.pdf` | `pdf/vol-2-a4.pdf` |
+
+Letter PDFs place each PNG full-bleed at 300 dpi. A4 PDFs scale that same art to fit inside the page, centered on white, with nothing cropped. Each PDF is 13 pages, in the same order as the PNGs below.
+
 - Ink: black lines on white. Color the open shapes.
 - The small footer on every page reads `STEWARDOFTHEKING · BSB`.
 

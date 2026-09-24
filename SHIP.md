@@ -1,8 +1,17 @@
-# SHIP — bible-kids-coloring-book-bsb Letter PNGs
+# SHIP — bible-kids-coloring-book-bsb
 
-Print masters only. US Letter, 2550×3300, 300 dpi, pure black-and-white (two gray levels). Personal use. Stories inspired by the Berean Standard Bible (public domain). Not for resale of the files.
+Print masters. Page art is US Letter, 2550×3300, 300 dpi, pure black-and-white. Buyer PDFs are 1-bit CCITT Group 4. Personal use. Stories inspired by the Berean Standard Bible (public domain). Not for resale of the files.
 
 Footer on every page: `STEWARDOFTHEKING · BSB`
+
+## Buyer PDFs
+
+Print at actual size (100%).
+
+- `pdf/vol-1-letter.pdf` — US Letter, 612×792 pt, 13 pages
+- `pdf/vol-2-letter.pdf` — US Letter, 612×792 pt, 13 pages
+- `pdf/vol-1-a4.pdf` — A4, 595×842 pt, 13 pages, art fit and centered
+- `pdf/vol-2-a4.pdf` — A4, 595×842 pt, 13 pages, art fit and centered
 
 ## Volume 1
 
