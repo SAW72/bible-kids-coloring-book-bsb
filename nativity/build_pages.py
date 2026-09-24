@@ -330,30 +330,39 @@ def compose_cover() -> Path:
 def compose_parent_note() -> Path:
     page = Image.new("L", (W, H), 255)
     draw = ImageDraw.Draw(page)
-    # Frame sits clear of the footer. Bottom edge leaves MIN_LINE_GAP above the footer ink.
-    frame_bottom = FOOTER_INK_TOP - MIN_LINE_GAP - 1
-    frame(draw, 70, 70, 2479, frame_bottom, 8)
+    # Same rounded frame as the volume parent notes, clear of the footer.
+    frame_bottom = 3164
+    draw.rounded_rectangle([70, 70, 2479, frame_bottom], radius=46, outline=0, width=8)
 
     left = 140
     right = 2410
     width = right - left
-    # First line starts a full gap below the top rule.
-    ink = 70 + 8 + MIN_LINE_GAP
+    # Single spacing, matching the volume notes (not a 48px gap between body lines).
+    line_gap = 22
 
     def paragraph(text: str, face: ImageFont.FreeTypeFont, ink_top: int) -> int:
         for line in wrap(draw, text, face, width):
-            ink_top = draw_left_ink(draw, line, left, ink_top, face) + MIN_LINE_GAP
+            ink_top = draw_left_ink(draw, line, left, ink_top, face) + line_gap
         return ink_top
 
     def heading(text: str, ink_top: int) -> int:
-        face = font(NUNITO_XB, 48)
-        return draw_left_ink(draw, text, left, ink_top, face) + MIN_LINE_GAP
+        face = font(NUNITO_XB, 52)
+        return draw_left_ink(draw, text, left, ink_top + 10, face) + line_gap
 
-    title = font(FRED_BOLD, 96)
-    ink = draw_left_ink(draw, "For Parents", left, ink, title) + MIN_LINE_GAP
-    ink = draw_left_ink(draw, "& Sunday School", left, ink, title) + MIN_LINE_GAP
+    # Outlined bubble title, centered, same size as the volume notes.
+    bubble = font(FRED_BOLD, 150)
+    stroke = 12
+    ink = 103
+    ink += draw_centered(draw, "For Parents", ink, bubble, fill=255, stroke=stroke)
+    ink += 32
+    ink += draw_centered(draw, "& Sunday School", ink, bubble, fill=255, stroke=stroke)
+    # At least 40px of white under the title descenders, then the centered subtitle.
+    ink += 48
+    subtitle = font(NUNITO_XB, 64)
+    ink += draw_centered(draw, "The Nativity", ink, subtitle)
+    ink += 28
 
-    body = font(NUNITO, 36)
+    body = font(NUNITO, 40)
     ink = paragraph(
         "Twelve pictures tell the story of Jesus\u2019 birth, from the angel\u2019s visit to Mary to the night the shepherds came. Color them in order at home or in Sunday school. The pictures are gentle on purpose.",
         body,
@@ -368,15 +377,14 @@ def compose_parent_note() -> Path:
     )
 
     ink = heading("The story in this book", ink)
-    note = font(NUNITO, 34)
     stories = [
-        "1. Gabriel appears to Mary \u2014 an angel brings quiet news. Jesus\u2019 name means \u201cThe Lord saves.\u201d",
+        "1. Gabriel appears to Mary \u2014 the angel brings good news.",
         "2. Mary says yes \u2014 she calls herself the Lord\u2019s servant.",
         "3. Mary visits Elizabeth \u2014 two mothers meet with joy.",
         "4. An angel speaks to Joseph \u2014 in a dream he is told the child\u2019s name.",
         "5. Caesar\u2019s decree \u2014 everyone goes to be registered.",
         "6. The journey to Bethlehem \u2014 Mary and Joseph travel to the city of David.",
-        "7. No room at the inn \u2014 they are turned toward a stable.",
+        "7. No room at the inn \u2014 there was no room for them in the inn.",
         "8. Jesus is born \u2014 the baby is laid in a manger.",
         "9. Angels and the shepherds \u2014 good news in the fields at night.",
         "10. The shepherds visit \u2014 they find the baby in the manger.",
@@ -384,7 +392,7 @@ def compose_parent_note() -> Path:
         "12. Mary treasures these things \u2014 she keeps them in her heart.",
     ]
     for item in stories:
-        ink = paragraph(item, note, ink)
+        ink = paragraph(item, body, ink)
 
     ink = heading("Talk together", ink)
     prompts = [
@@ -416,26 +424,17 @@ def compose_parent_note() -> Path:
         ink,
     )
 
-    # paragraph() leaves MIN_LINE_GAP after the last line, so the ink bottom is ink - MIN_LINE_GAP.
-    text_bottom = ink - MIN_LINE_GAP
-    frame_inner = frame_bottom - 8
-    if text_bottom + MIN_LINE_GAP > frame_inner:
-        raise SystemExit(
-            f"Parent note text reaches y={text_bottom}, inside the frame that ends at {frame_inner}"
-        )
+    text_bottom = ink - line_gap
+    if text_bottom > frame_bottom - 24:
+        raise SystemExit(f"Parent note text reaches y={text_bottom}, frame ends at {frame_bottom}")
+    if FOOTER_INK_TOP - text_bottom < 40:
+        raise SystemExit(f"Parent note text is {FOOTER_INK_TOP - text_bottom}px from the footer")
 
     draw_footer(draw)
     out = PAGES / "14-parent-note.png"
     save_page(page, out)
     print(f"parent note text bottom y={text_bottom}")
     return out
-
-
-def frame(draw: ImageDraw.ImageDraw, x0: int, y0: int, x1: int, y1: int, t: int) -> None:
-    draw.rectangle([x0, y0, x1, y0 + t - 1], fill=0)
-    draw.rectangle([x0, y1 - t + 1, x1, y1], fill=0)
-    draw.rectangle([x0, y0, x0 + t - 1, y1], fill=0)
-    draw.rectangle([x1 - t + 1, y0, x1, y1], fill=0)
 
 
 def write_captions() -> None:
@@ -542,7 +541,16 @@ def assert_cover_spacing(path: Path) -> None:
 
 def assert_parent_spacing(path: Path) -> None:
     bands = ink_bands(path, 40, H)
-    assert_gaps(bands, "parent note")
+    # Top rule, "For Parents", "& Sunday School", then "The Nativity".
+    if len(bands) < 5:
+        raise SystemExit(f"parent note has only {len(bands)} ink bands")
+    title_gap = bands[3][0] - bands[2][1] - 1
+    footer_gap = bands[-1][0] - bands[-2][1] - 1
+    print(f"parent note title-to-subtitle gap: {title_gap}; footer gap: {footer_gap}")
+    if title_gap < 40:
+        raise SystemExit(f"subtitle is {title_gap}px under the title descenders")
+    if footer_gap < 40:
+        raise SystemExit(f"footer gap is {footer_gap}px")
 
 
 def verify(paths: list[Path]) -> None:
