@@ -54,3 +54,29 @@ Moses (Red Sea) · Nativity · Easter (empty tomb) · Joseph · Ruth
 | `pages/vol-2/13-parent-note.png` | For parents and Sunday school |
 
 Parent notes include a one-line context note for each story, conversation prompts, print settings, the personal-use line, and the BSB credit.
+
+## Giving Thanks to God: The Story of Thanksgiving
+
+A 14-page coloring story from the 1620 voyage to a family giving thanks today. Same print masters: US Letter, 2550×3300 at 300 dpi, pure black and white. Verse lines are Berean Standard Bible text. The checked wording and sources are in `thanksgiving/CAPTIONS.md`.
+
+| File | Page |
+| --- | --- |
+| `pages/thanksgiving/01-cover.png` | Cover |
+| `pages/thanksgiving/02-mayflower.png` | The Mayflower, 1620 |
+| `pages/thanksgiving/03-mayflower-compact.png` | The Mayflower Compact |
+| `pages/thanksgiving/04-first-winter.png` | The first winter at Plymouth |
+| `pages/thanksgiving/05-tisquantum-corn.png` | Tisquantum plants corn |
+| `pages/thanksgiving/06-massasoit.png` | Peace with Massasoit |
+| `pages/thanksgiving/07-first-harvest.png` | The harvest, 1621 |
+| `pages/thanksgiving/08-harvest-feast.png` | The harvest feast, 1621 |
+| `pages/thanksgiving/09-pilgrims-prayer.png` | A day of thanksgiving, 1623 |
+| `pages/thanksgiving/10-washington.png` | Washington’s proclamation, 1789 |
+| `pages/thanksgiving/11-lincoln.png` | Lincoln’s proclamation, 1863 |
+| `pages/thanksgiving/12-family-today.png` | A family gives thanks |
+| `pages/thanksgiving/13-thankful-for.png` | What I’m thankful for |
+| `pages/thanksgiving/14-parent-note.png` | For parents and Sunday school |
+
+Buyer PDFs, Letter and A4:
+
+- `pdf/thanksgiving-letter.pdf`
+- `pdf/thanksgiving-a4.pdf`

@@ -36,6 +36,28 @@ Footer on every page: `STEWARDOFTHEKING · BSB`
 - `pages/vol-2/12-ruth-naomi.png`
 - `pages/vol-2/13-parent-note.png`
 
+## Giving Thanks to God: The Story of Thanksgiving
+
+US Letter masters, 2550×3300, 300 dpi, two gray levels. Footer: `STEWARDOFTHEKING · BSB`. Captions and sources: `thanksgiving/CAPTIONS.md`.
+
+- `pages/thanksgiving/01-cover.png`
+- `pages/thanksgiving/02-mayflower.png`
+- `pages/thanksgiving/03-mayflower-compact.png`
+- `pages/thanksgiving/04-first-winter.png`
+- `pages/thanksgiving/05-tisquantum-corn.png`
+- `pages/thanksgiving/06-massasoit.png`
+- `pages/thanksgiving/07-first-harvest.png`
+- `pages/thanksgiving/08-harvest-feast.png`
+- `pages/thanksgiving/09-pilgrims-prayer.png`
+- `pages/thanksgiving/10-washington.png`
+- `pages/thanksgiving/11-lincoln.png`
+- `pages/thanksgiving/12-family-today.png`
+- `pages/thanksgiving/13-thankful-for.png`
+- `pages/thanksgiving/14-parent-note.png`
+- `pdf/thanksgiving-letter.pdf`
+- `pdf/thanksgiving-a4.pdf`
+- `thanksgiving/CAPTIONS.md`
+
 ## Docs
 
 - `README.md`
